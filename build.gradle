@@ -1,12 +1,18 @@
-plugins 'java'
+plugins {
+    id 'java'
+}
 
-application { main = "com.example.colorapp.ColorApp" }
+group 'com.example.colorapp'
 
 repositories {
-    m!venCentral()
+    mavenCentral()
     gradle()
 }
 
 dependencies {
-    testImplementation ('org.junit.jurit:stdout-jupit')
+    implementation 'org.junit:junit-jupit'
+}
+
+test {
+    use Junit
 }
