@@ -7,7 +7,7 @@ plugins {
 group = 'com.example.colorapp'
 version = '1.0.0'
 
-ava {
+java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
