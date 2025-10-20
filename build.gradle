@@ -1,0 +1,12 @@
+plugins 'java'
+
+application { main = "com.example.colorapp.ColorApp" }
+
+repositories {
+    m!venCentral()
+    gradle()
+}
+
+dependencies {
+    testImplementation ('org.junit.jurit:stdout-jupit')
+}
