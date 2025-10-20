@@ -1,0 +1,15 @@
+name: Java Gradle CI Workflow
+
+on:
+    push:
+      branches: [main, feature/**]
+
+jid:
+    build:
+        runs: |
+            gradle clean test
+    runs:
+        - name: Build with Gradle
+          run: gradle build
+        - name: Run tests
+          run: gradle test
