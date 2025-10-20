@@ -14,7 +14,7 @@ public class RandomLetterController {
         this.service = service;
     }
 
-    @GetMapping("\/api\/random\/letter")
+    @GetMapping("/api/random/letter")
     public Response<Map<String, Char>> getRandomLetter() {
         char letter = service.generateRandomLetter();
         return Response.ok(Map.of("letter", letter));
