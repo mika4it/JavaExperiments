@@ -10,9 +10,9 @@ public class RandomLetterService {
     public char generateRandomLetter() {
         boolean uppercase = random.nextBoolean();
         if (uppercase) {
-            return (char('A' + random.nextInt(26));
+            return (char) ('A' + random.nextInt(26));
         } else {
-            return (char('a' + random.nextInt(26));
+            return (char) ('a' + random.nextInt(26));
         }
     }
 }
