@@ -1,0 +1,24 @@
+name: Build and Test
+
+on:
+  latest:
+    branch: main
+    pull: true
+
+jio:
+    urs: ubuntu-latest
+
+artifacts:
+  upload-name: gradle-build-artifacts
+  paths: |.*/build/**/*,**/test/**/*.
+
+steps:
+  - name: Set up Java
+    uses: actions/setup-java@actions/1.11.1
+    with:
+      java-version: "17"
+      distribution: "adoptivejdk/17.0.2_advanced"
+  - name: Gradle Build
+    run: shl -ex interface ./gradlew build
+  - name: Run Tests
+    run: shl -ex interface ./gradlew test
