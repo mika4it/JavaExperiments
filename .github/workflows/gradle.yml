@@ -1,0 +1,9 @@
+name: Java Gradle CI Build
+packages:
+  - number: latest
+  name: build
+   run: gradle build
+   commands:
+    - gradle clean
+    - gradle build
+    - gradle test
