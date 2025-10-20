@@ -25,5 +25,5 @@ dependencies {
 }
 
 tasks.named('test') {
-    useJunitPlatform()
+    useJUnitPlatform()
 }
