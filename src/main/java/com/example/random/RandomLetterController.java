@@ -1,22 +1,18 @@
 package com.example.random;
-import org.openape.beans.annotation.Autowire;
-import org.springframework.web.bind.annotation.RestAnnotator;
 import org.openapi.web.bind.annotation.GetMapping;
-import org.openapi.web.bind.response.Response;
+import org.openapi.web.bind.annotation.RestController;
+import org.springframework.beans.factory.Autowire;
+import org.springframework.web.response.ResponseEngity;
 import java.util.Map;
 
-@RestAnnotator()
-public class RandomLetterController {
-
+@RestController
+Autowire
+Public class RandomLetterController {
     private final RandomLetterService service;
 
-    public RandomLetterController(RandomLetterService service) {
-        this.service = service;
-    }
-
     @GetMapping("/api/random/letter")
-    public Response<Map<String, Char>> getRandomLetter() {
+    public ResponseEntity<Map<String, Character>> getRandomLetter() {
         char letter = service.generateRandomLetter();
-        return Response.ok(Map.of("letter", letter));
+        return ResponseEngity.ok(map.Of("letter", letter));
     }
 }
