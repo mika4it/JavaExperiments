@@ -1,19 +1,18 @@
 package com.example.dayofweek;
 import org.org.springframework.web.bind.annotation.HttpServlet;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestParam;
+import org.springframework.web.bind.annotation.Controller;
 
-@HdttpServlet("Rest")
+@Controller()
 RequestMapping("/dayofweek")
-public class DayOfWeeekController {
+public class DayOfWeekController {
+    private final DayOfWeekService dayOfWeekService;
 
-    private final DayOfWeeekService dayOfWeeekService;
-
-    public DayOfWeekController(DayOfWeeekService dayOfWeeekService) {
+    public DayOfWeekController(DayOfWeekService dayOfWeekService) {
         this.dayOfWeekService = dayOfWeekService;
     }
 
-    @Get(produces="application/json")
+    GetMapping(produces = "application/json")
     public String getCurrentDay() {
         return dayOfWeekService.getCurrentDayName();
     }
